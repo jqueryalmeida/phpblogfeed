@@ -1,0 +1,12 @@
+RewriteEngine On
+
+Header always unset X-Frame-Options
+Header add Access-Control-Allow-Origin "*"
+Header add Access-Control-Allow-Headers "origin, x-requested-with, content-type"
+Header add Access-Control-Allow-Methods "PUT, GET, POST, DELETE, OPTIONS"
+
+RewriteRule ^([a-zA-Z0-9_%-]+)$ index.php?tag=$1
+RewriteRule ^([a-zA-Z0-9_%-]+)/$ index.php?tag=$1
+
+RewriteRule ^([a-zA-Z0-9_-]+)/([0-9]+)$ index.php?tag=$1&limit=$2
+RewriteRule ^([a-zA-Z0-9_-]+)/([0-9]+)/$ index.php?tag=$1&limit=$2
