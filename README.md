@@ -1,4 +1,4 @@
-# RSS to JSON 
+# Google Blogger RSS to JSON 
 
 Open index.php
 
